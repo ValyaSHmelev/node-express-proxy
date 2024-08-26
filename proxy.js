@@ -15,9 +15,9 @@ if (!TARGET_URL) {
 // Настройка прокси
 app.use('/proxy', proxy(TARGET_URL, {
     // Опции прокси
-    proxyReqPathResolver: function (req) {
-        return req.originalUrl.replace('/proxy', ''); // Удаляем '/proxy' из пути
-    },
+    // proxyReqPathResolver: function (req) {
+    //     return req.originalUrl.replace('/proxy', ''); // Удаляем '/proxy' из пути
+    // },
 }));
 
 app.listen(PORT, () => {
