@@ -38,7 +38,7 @@ const router = express.Router()
 
 router.get('/fundmetrology/cm/iaux/vri/:globalId', async (req, res) => {
     try {
-        let response = await fetchRetry('https://fgis.gost.ru/fundmetrology/cm/iaux/vri/1-' + req.params.globalId, 1000, 5)
+        let response = await fetchRetry('https://fgis.gost.ru/fundmetrology/cm/iaux/vri/' + req.params.globalId, 1000, 5)
         response = await response.json()
         res.status(200).json(response)
     } catch (error) {
